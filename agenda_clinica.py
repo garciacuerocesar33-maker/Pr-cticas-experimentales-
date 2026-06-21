@@ -1,17 +1,13 @@
 """
 Agenda de Turnos de Pacientes de una Clínica
-Guía de Práctica #01 - Estructura de Datos
-Universidad Estatal Amazónica
-Autor: [Nombre del Estudiante]
+Autor: Cesar Garias Cuero
 Período Académico: 2026-2026
 """
 
 from datetime import datetime
 
 
-# =============================================
 # ESTRUCTURAS DE DATOS (usando listas/vectores)
-# =============================================
 
 class Paciente:
     """Clase que representa a un paciente de la clínica."""
@@ -69,9 +65,7 @@ class AgendaClinica:
         self.turnos: list[Turno] = []            # Vector de turnos
         self._contador_turnos: int = 1
 
-    # ------------------------------------------
     # MÉTODOS DE PACIENTES
-    # ------------------------------------------
 
     def registrar_paciente(self, cedula: str, nombre: str, apellido: str,
                            telefono: str, fecha_nacimiento: str) -> bool:
@@ -109,9 +103,7 @@ class AgendaClinica:
                 print(f"  {i:02d}. {p}")
         print(f"{'='*70}\n")
 
-    # ------------------------------------------
     # MÉTODOS DE TURNOS
-    # ------------------------------------------
 
     def agendar_turno(self, cedula_paciente: str, medico: str,
                       especialidad: str, fecha: str, hora: str) -> bool:
@@ -191,9 +183,7 @@ class AgendaClinica:
             for t in turnos_pac:
                 print(f"  {t}")
 
-    # ------------------------------------------
     # REPORTERÍA CON MATRIZ
-    # ------------------------------------------
 
     def reporte_turnos_por_medico(self) -> None:
         """
@@ -250,9 +240,7 @@ class AgendaClinica:
             print(f"    {estado:<12}: {cant:>3} ({pct:5.1f}%)")
 
 
-# =============================================
 # FUNCIÓN PRINCIPAL — DEMOSTRACIÓN DEL SISTEMA
-# =============================================
 
 def separador(titulo: str = "") -> None:
     print(f"\n{'━'*70}")
